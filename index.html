@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fava meets XRP</title>
-    <link href="path_to_your_font/Noot.ttf" rel="stylesheet">
+    <!-- Link to Noot.ttf font -->
     <style>
+        @font-face {
+            font-family: 'Noot';
+            src: url('Noot.ttf') format('truetype');
+        }
+
         body {
             margin: 0;
             font-family: 'Noot', sans-serif;
@@ -17,23 +22,23 @@
         }
 
         .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            height: 100vh; /* Full height of the viewport */
             position: relative;
-            text-align: center;
-            padding-top: 150px; /* Adjust padding to match image position */
-            z-index: 2;
         }
 
         .hero-image {
-            width: 100%;
+            width: 50%;
             height: auto;
         }
 
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 3;
+        .text-content {
+            max-width: 600px;
+            text-align: left;
+            z-index: 2;
         }
 
         .title {
@@ -45,8 +50,8 @@
 
         .subtitle {
             font-size: 2rem;
-            color: white;
             margin-top: 10px;
+            color: white;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
 
@@ -84,17 +89,28 @@
             color: #00b0ff;
         }
 
-        /* Background for mobile */
+        /* Mobile Background and Responsiveness */
         @media (max-width: 768px) {
             body {
                 background-image: url('path_to_mobile_background.png');
             }
-            .content {
-                top: 40%;
+
+            .hero-section {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 20px;
             }
+
+            .hero-image {
+                width: 70%;
+                margin-top: 20px;
+            }
+
             .title {
                 font-size: 2.5rem;
             }
+
             .cta-button {
                 font-size: 1.2rem;
             }
@@ -104,11 +120,8 @@
 <body>
 
     <div class="hero-section">
-        <!-- Hero Image -->
-        <img class="hero-image" src="path_to_hero_image.png" alt="Hero Image">
-
-        <!-- Content Overlaid on Hero Image -->
-        <div class="content">
+        <!-- Text Content -->
+        <div class="text-content">
             <div class="title">FAVA</div>
             <div class="subtitle">meets XRP</div>
             <div class="subtitle">David Schwartz's German Shepherd became crypto's cutest meme coin. The XRP Army's official good boy.</div>
@@ -122,6 +135,9 @@
                 <a href="https://t.me" target="_blank">Telegram</a>
             </div>
         </div>
+
+        <!-- Hero Image -->
+        <img class="hero-image" src="path_to_hero_image.png" alt="Hero Image">
     </div>
 
 </body>
