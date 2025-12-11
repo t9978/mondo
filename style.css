@@ -20,6 +20,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 2em;
+    background-image: url('https://raw.githubusercontent.com/your-username/your-repository-name/main/path_to_desktop_background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Hero Text */
