@@ -20,17 +20,16 @@
             display: flex;
             flex-direction: column;
             height: 100vh; /* Full height of viewport */
-            justify-content: space-between;
         }
 
         .hero-section {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 50px;
-            height: 100vh; /* Full viewport height */
+            justify-content: center;
+            align-items: center; /* Center both horizontally and vertically */
+            padding: 0 20px; /* Adjust padding to avoid text being too close to edges */
+            height: 100vh; /* Make sure this takes up the full screen height */
             position: relative;
-            box-sizing: border-box; /* Make sure padding doesn't break layout */
+            box-sizing: border-box;
         }
 
         .hero-image {
@@ -39,9 +38,9 @@
         }
 
         .text-content {
-            max-width: 600px;
-            text-align: left;
+            text-align: center;
             z-index: 2;
+            max-width: 600px; /* Limit text width */
         }
 
         .title {
@@ -78,30 +77,13 @@
             background-color: #0092cc;
         }
 
-        .social-buttons {
-            margin-top: 30px;
-        }
-
-        .social-buttons a {
-            margin: 0 20px;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-        }
-
-        .social-buttons a:hover {
-            color: #00b0ff;
-        }
-
         .bottom-text {
             position: absolute;
-            bottom: 0;
+            bottom: 20px; /* Keep the text at the bottom of the screen */
             left: 20px;
             font-size: 1.2rem;
             color: white;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-            margin-top: auto; /* Ensures it's pushed to the bottom of the screen */
         }
 
         .bottom-text span {
@@ -158,7 +140,6 @@
                 <a href="your_buy_fava_link_here" class="cta-button" target="_blank">X</a>
                 <a href="https://t.me" class="cta-button" target="_blank">Telegram</a>
             </div>
-
         </div>
 
         <!-- Hero Image -->
