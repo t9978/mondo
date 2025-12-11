@@ -3,31 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MONDO</title>
-    <!-- Google Font for NOOT-like font -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Fava meets XRP</title>
+    <link href="path_to_your_font/Noot.ttf" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Noot', sans-serif;
+            background-image: url('path_to_desktop_background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            padding-top: 100px; /* Adjust for hero image */
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .cta-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #00b0ff;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #0092cc;
+        }
+
+        .social-buttons {
+            margin-top: 20px;
+        }
+
+        .social-buttons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .social-buttons a:hover {
+            color: #00b0ff;
+        }
+
+        .mobile-background {
+            background-image: url('path_to_mobile_background.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* For mobile view */
+        @media (max-width: 768px) {
+            body {
+                background-image: url('path_to_mobile_background.png');
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <img src="path_to_hero_image.png" alt="Hero Image" class="hero-image">
-            <div class="hero-text">
-                <h1>MONDO</h1>
-                <p>The cutest meme coin on MONAD, just like your favorite pup!</p>
-                <div class="cta-buttons">
-                    <button><a href="#">BUY $MONDO</a></button>
-                    <button><a href="#">Twitter</a></button>
-                    <button><a href="#">Telegram</a></button>
-                </div>
-            </div>
-            <!-- Decorative text in the bottom-left corner -->
-            <div class="decorative-text">
-                <p class="love">∞ Love</p>
-                <p class="good-boy">100% Good Boy</p>
-                <p class="xrp-powered">MONAD Powered</p>
-            </div>
+
+    <div class="container">
+        <!-- Hero Image -->
+        <img class="hero-image" src="path_to_hero_image.png" alt="Hero Image">
+
+        <!-- Title and Subtitle -->
+        <div class="title">FAVA</div>
+        <div class="subtitle">meets XRP</div>
+        <div class="subtitle">David Schwartz's German Shepherd became crypto's cutest meme coin. The XRP Army's official good boy.</div>
+
+        <!-- Call to Action Button with Link -->
+        <a href="your_buy_fava_link_here" class="cta-button" target="_blank">BUY $FAVA</a>
+
+        <!-- Social Media Links -->
+        <div class="social-buttons">
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://t.me" target="_blank">Telegram</a>
         </div>
-    </header>
+    </div>
+
 </body>
 </html>
