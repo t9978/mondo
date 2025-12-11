@@ -28,8 +28,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 50px;
-            height: calc(100vh - 100px); /* Adjusted for space at bottom */
+            height: 100vh; /* Full viewport height */
             position: relative;
+            box-sizing: border-box; /* Make sure padding doesn't break layout */
         }
 
         .hero-image {
@@ -95,11 +96,12 @@
 
         .bottom-text {
             position: absolute;
-            bottom: 20px;
+            bottom: 0;
             left: 20px;
             font-size: 1.2rem;
             color: white;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            margin-top: auto; /* Ensures it's pushed to the bottom of the screen */
         }
 
         .bottom-text span {
