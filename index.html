@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fava meets XRP</title>
-    <!-- Link to Noot.ttf font -->
     <style>
         @font-face {
             font-family: 'Noot';
@@ -18,7 +17,10 @@
             background-size: cover;
             background-position: center;
             color: white;
-            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full height of viewport */
+            justify-content: space-between;
         }
 
         .hero-section {
@@ -26,7 +28,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 50px;
-            height: 100vh; /* Full height of the viewport */
+            height: calc(100vh - 100px); /* Adjusted for space at bottom */
             position: relative;
         }
 
@@ -67,6 +69,8 @@
             text-decoration: none;
             text-transform: uppercase;
             font-weight: bold;
+            display: inline-block;
+            margin-right: 20px;
         }
 
         .cta-button:hover {
@@ -89,6 +93,19 @@
             color: #00b0ff;
         }
 
+        .bottom-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 1.2rem;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .bottom-text span {
+            margin-right: 20px;
+        }
+
         /* Mobile Background and Responsiveness */
         @media (max-width: 768px) {
             body {
@@ -100,6 +117,7 @@
                 justify-content: center;
                 text-align: center;
                 padding: 20px;
+                height: calc(100vh - 100px);
             }
 
             .hero-image {
@@ -113,6 +131,7 @@
 
             .cta-button {
                 font-size: 1.2rem;
+                margin-top: 10px;
             }
         }
     </style>
@@ -127,17 +146,23 @@
             <div class="subtitle">David Schwartz's German Shepherd became crypto's cutest meme coin. The XRP Army's official good boy.</div>
 
             <!-- Call to Action Button with Link -->
-            <a href="your_buy_fava_link_here" class="cta-button" target="_blank">BUY $FAVA</a>
-
-            <!-- Social Media Links -->
-            <div class="social-buttons">
-                <a href="https://twitter.com" target="_blank">Twitter</a>
-                <a href="https://t.me" target="_blank">Telegram</a>
+            <div>
+                <a href="your_buy_fava_link_here" class="cta-button" target="_blank">BUY $FAVA</a>
+                <a href="your_buy_fava_link_here" class="cta-button" target="_blank">X</a>
+                <a href="https://t.me" class="cta-button" target="_blank">Telegram</a>
             </div>
+
         </div>
 
         <!-- Hero Image -->
         <img class="hero-image" src="path_to_hero_image.png" alt="Hero Image">
+    </div>
+
+    <!-- Bottom Text -->
+    <div class="bottom-text">
+        <span>♾️ LOVE</span> 
+        <span>100% GOOD BOY</span>
+        <span>MONAD POWERED</span>
     </div>
 
 </body>
