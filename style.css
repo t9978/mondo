@@ -8,7 +8,7 @@
 /* Backgrounds */
 body {
     background: linear-gradient(to bottom left, #B6E4E1, #FF47A7); /* Gradient similar to the reference background */
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'NOOT', sans-serif;
 }
 
 /* Hero section */
@@ -16,17 +16,19 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('path_to_desktop_background.jpg');
-    background-size: cover;
-    background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    color: white;
-    text-align: center;
+    padding: 0 2em;
 }
 
 /* Hero Text */
+.hero-text {
+    max-width: 50%;
+    color: white;
+    text-align: left;
+}
+
 .hero-text h1 {
     font-size: 5em;
     font-weight: 700;
@@ -42,7 +44,7 @@ body {
 
 .cta-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1em;
 }
 
@@ -64,6 +66,12 @@ body {
 /* Hover effect */
 .cta-buttons button:hover {
     background-color: #B6E4E1;
+}
+
+/* Hero Image */
+.hero-image {
+    max-width: 40%;
+    height: auto;
 }
 
 /* Decorative text (left bottom corner) */
@@ -95,12 +103,26 @@ body {
 /* Mobile responsiveness */
 @media only screen and (max-width: 768px) {
     .hero {
-        background-image: url('path_to_mobile_background.jpg');
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    .hero-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
     .hero-text h1 {
         font-size: 3em;
     }
+
     .hero-text p {
         font-size: 1.2em;
+    }
+
+    .hero-image {
+        max-width: 80%;
+        margin-top: 20px;
     }
 }
