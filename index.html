@@ -13,28 +13,41 @@
             background-size: cover;
             background-position: center;
             color: white;
+            overflow-x: hidden;
         }
 
-        .container {
+        .hero-section {
             position: relative;
             text-align: center;
-            padding-top: 100px; /* Adjust for hero image */
+            padding-top: 150px; /* Adjust padding to match image position */
+            z-index: 2;
         }
 
         .hero-image {
-            max-width: 100%;
+            width: 100%;
             height: auto;
         }
 
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
         .title {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: bold;
-            margin-top: 20px;
+            color: #00b0ff;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
         }
 
         .subtitle {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            color: white;
             margin-top: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
 
         .cta-button {
@@ -42,11 +55,13 @@
             padding: 15px 30px;
             background-color: #00b0ff;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
         }
 
         .cta-button:hover {
@@ -54,52 +69,58 @@
         }
 
         .social-buttons {
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .social-buttons a {
-            margin: 0 10px;
+            margin: 0 20px;
             color: white;
             font-size: 1.5rem;
             text-decoration: none;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
         }
 
         .social-buttons a:hover {
             color: #00b0ff;
         }
 
-        .mobile-background {
-            background-image: url('path_to_mobile_background.png');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* For mobile view */
+        /* Background for mobile */
         @media (max-width: 768px) {
             body {
                 background-image: url('path_to_mobile_background.png');
+            }
+            .content {
+                top: 40%;
+            }
+            .title {
+                font-size: 2.5rem;
+            }
+            .cta-button {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="hero-section">
         <!-- Hero Image -->
         <img class="hero-image" src="path_to_hero_image.png" alt="Hero Image">
 
-        <!-- Title and Subtitle -->
-        <div class="title">FAVA</div>
-        <div class="subtitle">meets XRP</div>
-        <div class="subtitle">David Schwartz's German Shepherd became crypto's cutest meme coin. The XRP Army's official good boy.</div>
+        <!-- Content Overlaid on Hero Image -->
+        <div class="content">
+            <div class="title">FAVA</div>
+            <div class="subtitle">meets XRP</div>
+            <div class="subtitle">David Schwartz's German Shepherd became crypto's cutest meme coin. The XRP Army's official good boy.</div>
 
-        <!-- Call to Action Button with Link -->
-        <a href="your_buy_fava_link_here" class="cta-button" target="_blank">BUY $FAVA</a>
+            <!-- Call to Action Button with Link -->
+            <a href="your_buy_fava_link_here" class="cta-button" target="_blank">BUY $FAVA</a>
 
-        <!-- Social Media Links -->
-        <div class="social-buttons">
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://t.me" target="_blank">Telegram</a>
+            <!-- Social Media Links -->
+            <div class="social-buttons">
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://t.me" target="_blank">Telegram</a>
+            </div>
         </div>
     </div>
 
