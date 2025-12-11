@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fava meets XRP</title>
+    <title>MONDO</title>
     <style>
         @font-face {
             font-family: 'Noot';
@@ -19,7 +20,7 @@
             color: white;
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            height: 100vh; /* Full height of viewport */
             justify-content: space-between;
         }
 
@@ -27,24 +28,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 100vh;
+            padding: 50px;
+            height: calc(100vh - 100px); /* Adjusted for space at bottom */
             position: relative;
-            flex-wrap: wrap;
-            padding: 0 50px;
         }
 
         .hero-image {
-            width: 45%;
+            width: 50%;
             height: auto;
-            max-height: 90vh;
-            object-fit: cover;
         }
 
         .text-content {
             max-width: 600px;
-            z-index: 2;
-            position: relative;
             text-align: left;
+            z-index: 2;
         }
 
         .title {
@@ -81,6 +78,22 @@
             background-color: #0092cc;
         }
 
+        .social-buttons {
+            margin-top: 30px;
+        }
+
+        .social-buttons a {
+            margin: 0 20px;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .social-buttons a:hover {
+            color: #00b0ff;
+        }
+
         .bottom-text {
             position: absolute;
             bottom: 20px;
@@ -105,13 +118,11 @@
                 justify-content: center;
                 text-align: center;
                 padding: 20px;
-                height: 100vh;
+                height: calc(100vh - 100px);
             }
 
             .hero-image {
-                width: 100%;
-                height: 50vh; /* Adjust the height of hero image on mobile */
-                object-fit: cover;
+                width: 70%;
                 margin-top: 20px;
             }
 
@@ -123,14 +134,6 @@
                 font-size: 1.2rem;
                 margin-top: 10px;
             }
-
-            /* Bottom text position adjustment */
-            .bottom-text {
-                position: absolute;
-                bottom: 10px;
-                left: 20px;
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
@@ -139,13 +142,13 @@
     <div class="hero-section">
         <!-- Text Content -->
         <div class="text-content">
-            <div class="title">FAVA</div>
-            <div class="subtitle">meets XRP</div>
-            <div class="subtitle">David Schwartz's German Shepherd became crypto's cutest meme coin. The XRP Army's official good boy.</div>
+            <div class="title">MONDO</div>
+            <div class="subtitle">meets MONAD</div>
+            <div class="subtitle">Purple dog became MONAD cutest meme coin. The NAD Army's official good boy.</div>
 
             <!-- Call to Action Button with Link -->
             <div>
-                <a href="your_buy_fava_link_here" class="cta-button" target="_blank">BUY $FAVA</a>
+                <a href="your_buy_fava_link_here" class="cta-button" target="_blank">BUY $MONDO</a>
                 <a href="your_buy_fava_link_here" class="cta-button" target="_blank">X</a>
                 <a href="https://t.me" class="cta-button" target="_blank">Telegram</a>
             </div>
@@ -158,9 +161,9 @@
 
     <!-- Bottom Text -->
     <div class="bottom-text">
-        <span>unlimited love</span> 
-        <span>100% good boy</span>
-        <span>MONAD powered</span>
+        <span>♾️ LOVE</span> 
+        <span>100% GOOD BOY</span>
+        <span>MONAD POWERED</span>
     </div>
 
 </body>
